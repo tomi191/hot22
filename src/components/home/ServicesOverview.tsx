@@ -1,9 +1,6 @@
-'use client';
-
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import {
   Thermometer, Wind, Snowflake, Droplets, Search, Wrench, ArrowRight,
 } from 'lucide-react';
@@ -32,13 +29,9 @@ export function ServicesOverview() {
 
         {/* Active Grid - asymmetric layout */}
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 lg:auto-rows-[280px]">
-          {services.map(({ key, icon: Icon, image, size }, index) => (
-            <motion.div
+          {services.map(({ key, icon: Icon, image, size }) => (
+            <div
               key={key}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.5, delay: index * 0.08 }}
               className={
                 size === 'large'
                   ? 'lg:col-span-2 lg:row-span-2'
@@ -80,7 +73,7 @@ export function ServicesOverview() {
                   </div>
                 </div>
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
 

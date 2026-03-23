@@ -5,7 +5,6 @@ import { LanguageSwitcher } from './LanguageSwitcher';
 import { MobileMenu } from './MobileMenu';
 
 const navItems = [
-  { key: 'home', href: '/' },
   { key: 'services', href: '/services' },
   { key: 'about', href: '/about' },
   { key: 'blog', href: '/blog' },

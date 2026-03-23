@@ -13,7 +13,7 @@ export function Hero() {
         src="/images/services/hero.jpg"
         alt=""
         fill
-        className="object-cover opacity-20"
+        className="object-cover opacity-40"
         priority
       />
 

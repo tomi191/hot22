@@ -7,7 +7,6 @@ import { Menu, X } from 'lucide-react';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
 const navItems = [
-  { key: 'home', href: '/' },
   { key: 'services', href: '/services' },
   { key: 'about', href: '/about' },
   { key: 'blog', href: '/blog' },

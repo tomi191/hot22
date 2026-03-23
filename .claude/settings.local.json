@@ -5,7 +5,31 @@
       "WebFetch(domain:next-intl.dev)",
       "Bash(pnpm create:*)",
       "Bash(npx create-next-app@latest . --ts --tailwind --eslint --app --src-dir --turbopack --import-alias \"@/*\" --use-pnpm)",
-      "Bash(timeout 15 pnpm dev)"
+      "Bash(timeout 15 pnpm dev)",
+      "Bash(pnpm add:*)",
+      "Bash(pnpm build:*)",
+      "Bash(cd:*)",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_click",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "mcp__plugin_playwright_playwright__browser_snapshot",
+      "Bash(find /z/Clients* -maxdepth 2 -name package.json -path *rachk*)",
+      "Bash(find /z -maxdepth 4 -type d -iname *vrachk*)",
+      "Bash(find /z -maxdepth 3 -type d -iname *rachk*)",
+      "Read(//c/Users/User/**)",
+      "mcp__plugin_playwright_playwright__browser_console_messages",
+      "Bash(python3:*)",
+      "mcp__plugin_playwright_playwright__browser_fill_form",
+      "mcp__plugin_playwright_playwright__browser_resize",
+      "mcp__plugin_playwright_playwright__browser_evaluate",
+      "mcp__plugin_supabase_supabase__list_projects",
+      "mcp__plugin_supabase_supabase__execute_sql",
+      "mcp__plugin_supabase_supabase__get_project_url",
+      "mcp__plugin_supabase_supabase__get_publishable_keys",
+      "mcp__plugin_supabase_supabase__apply_migration",
+      "mcp__plugin_playwright_playwright__browser_type",
+      "WebFetch(domain:kie.ai)",
+      "WebFetch(domain:docs.kie.ai)"
     ]
   }
 }

@@ -48,10 +48,15 @@ export function Footer() {
                 <Phone size={16} className="mt-0.5 shrink-0" />
                 089 338 3443
               </a>
-              <div className="flex items-start gap-2 text-sm">
+              <a
+                href="https://maps.app.goo.gl/xozFPrmRVo1ey1kr6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-2 text-sm hover:text-hot-red"
+              >
                 <MapPin size={16} className="mt-0.5 shrink-0" />
                 <span>{tContact('address')}</span>
-              </div>
+              </a>
               <div className="flex gap-3 pt-2">
                 <a
                   href="https://wa.me/359893383443"
