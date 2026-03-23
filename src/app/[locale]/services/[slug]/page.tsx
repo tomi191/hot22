@@ -1,4 +1,3 @@
-import { use } from 'react';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
@@ -37,23 +36,54 @@ type Props = {
   params: Promise<{ locale: string; slug: string }>;
 };
 
-export default function ServiceDetailPage({ params }: Props) {
-  const { locale, slug } = use(params);
+export default async function ServiceDetailPage({ params }: Props) {
+  const { locale, slug } = await params;
   setRequestLocale(locale);
 
   const service = services.find((s) => s.slug === slug);
   if (!service) notFound();
+
+  const t = await getTranslations({ locale, namespace: 'ServicesList' });
+  const title = t(slug);
+  const description = t(`${slug}Desc`);
+
+  const serviceJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: title,
+    description: description,
+    provider: {
+      '@type': 'AutoRepair',
+      name: 'HOT22',
+      telephone: '+359893383443',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Варна',
+        addressCountry: 'BG',
+      },
+    },
+    areaServed: {
+      '@type': 'City',
+      name: 'Varna',
+    },
+  };
 
   const relatedServices = services
     .filter((s) => s.category === service.category && s.slug !== slug)
     .slice(0, 3);
 
   return (
-    <ServiceDetailContent
-      slug={slug}
-      iconName={service.icon}
-      relatedServices={relatedServices}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <ServiceDetailContent
+        slug={slug}
+        iconName={service.icon}
+        relatedServices={relatedServices}
+      />
+    </>
   );
 }
 
