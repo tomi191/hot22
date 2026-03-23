@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { createClient } from '@supabase/supabase-js';
 import { bookingSchema } from '@/lib/booking-schema';
 
 export async function POST(request: NextRequest) {
@@ -6,13 +7,28 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const data = bookingSchema.parse(body);
 
-    // TODO: Insert into Supabase when configured
-    // const supabase = createServerSupabaseClient();
-    // const { error } = await supabase.from('bookings').insert(data);
+    const supabase = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    );
 
-    // TODO: Send email notification
+    const { error } = await supabase.from('bookings').insert({
+      service: data.service,
+      date: data.date,
+      time: data.time,
+      name: data.name,
+      phone: data.phone,
+      email: data.email || null,
+      car_model: data.car_model,
+      notes: data.notes || null,
+    });
 
-    return NextResponse.json({ success: true, data });
+    if (error) {
+      console.error('Supabase booking insert error:', error);
+      return NextResponse.json({ success: false, error: 'Failed to save booking' }, { status: 500 });
+    }
+
+    return NextResponse.json({ success: true });
   } catch (error) {
     if (error instanceof Error && 'issues' in error) {
       return NextResponse.json({ success: false, error: 'Invalid data' }, { status: 400 });

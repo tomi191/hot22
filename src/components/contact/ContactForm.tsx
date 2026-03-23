@@ -3,18 +3,9 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
 import { useTranslations } from 'next-intl';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
-
-const contactSchema = z.object({
-  name: z.string().min(2),
-  phone: z.string().min(8),
-  email: z.string().email().optional().or(z.literal('')),
-  message: z.string().min(1),
-});
-
-type ContactFormData = z.infer<typeof contactSchema>;
+import { contactSchema, type ContactFormData } from '@/lib/contact-schema';
 
 export function ContactForm() {
   const t = useTranslations('Contact');
