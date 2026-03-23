@@ -1,8 +1,17 @@
 import { use } from 'react';
-import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { Shield, Cpu, Users, ArrowRight } from 'lucide-react';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'About' });
+  return {
+    title: `${t('title')} | HOT22`,
+    description: t('subtitle'),
+  };
+}
 
 type Props = {
   params: Promise<{ locale: string }>;

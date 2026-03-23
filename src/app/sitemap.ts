@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { services } from '@/lib/services-data';
 import { placeholderPosts } from '@/lib/blog-data';
 
-const BASE_URL = 'https://hot22.bg';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://hot22.vercel.app';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const locales = ['bg', 'en'];

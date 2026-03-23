@@ -1,5 +1,5 @@
 import { use } from 'react';
-import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { notFound } from 'next/navigation';
@@ -15,6 +15,17 @@ const iconMap: Record<string, React.ComponentType<{ size?: number }>> = {
   Thermometer, Wind, Settings, Snowflake, Droplets, Search, Sun,
   Wrench, Box, AirVent, Filter, Gauge, CircuitBoard, CalendarCheck, Zap,
 };
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+  const { locale, slug } = await params;
+  const t = await getTranslations({ locale, namespace: 'ServicesList' });
+  const title = t(slug);
+  const description = t(`${slug}Desc`);
+  return {
+    title: `${title} | HOT22`,
+    description,
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>

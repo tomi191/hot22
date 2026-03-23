@@ -1,5 +1,5 @@
 import { use } from 'react';
-import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { services, categories, type ServiceCategory } from '@/lib/services-data';
@@ -13,6 +13,15 @@ const iconMap: Record<string, React.ComponentType<{ size?: number }>> = {
   Thermometer, Wind, Settings, Snowflake, Droplets, Search, Sun,
   Wrench, Box, AirVent, Filter, Gauge, CircuitBoard, CalendarCheck, Zap,
 };
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Services' });
+  return {
+    title: `${t('sectionTitle')} | HOT22`,
+    description: t('sectionSubtitle'),
+  };
+}
 
 const categoryKeyMap: Record<ServiceCategory, string> = {
   repair: 'categoryRepair',

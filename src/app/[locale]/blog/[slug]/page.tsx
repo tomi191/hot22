@@ -1,11 +1,23 @@
 import { use } from 'react';
 import { setRequestLocale } from 'next-intl/server';
 import { useTranslations, useLocale } from 'next-intl';
+
 import { Link } from '@/i18n/navigation';
 import { notFound } from 'next/navigation';
 import { placeholderPosts } from '@/lib/blog-data';
 import { routing } from '@/i18n/routing';
 import { ArrowLeft, Calendar } from 'lucide-react';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+  const { locale, slug } = await params;
+  const post = placeholderPosts.find(p => p.slug === slug);
+  if (!post) return { title: 'HOT22' };
+  const title = locale === 'bg' ? post.title_bg : post.title_en;
+  return {
+    title: `${title} | HOT22`,
+    description: locale === 'bg' ? post.excerpt_bg : post.excerpt_en,
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
