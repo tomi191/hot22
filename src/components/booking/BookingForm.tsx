@@ -54,7 +54,12 @@ export function BookingForm() {
 
   async function onSubmit(data: BookingFormData) {
     try {
-      console.log('Booking form submission:', data);
+      const res = await fetch('/api/booking', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error('Failed');
       setStatus('success');
     } catch {
       setStatus('error');

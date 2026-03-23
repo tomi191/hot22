@@ -31,8 +31,12 @@ export function ContactForm() {
 
   async function onSubmit(data: ContactFormData) {
     try {
-      // Will be replaced with actual API call later
-      console.log('Contact form submission:', data);
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error('Failed');
       setStatus('success');
       reset();
     } catch {
