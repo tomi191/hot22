@@ -6,6 +6,7 @@ import { inter } from '@/lib/fonts';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { StickyMobileCTA } from '@/components/layout/StickyMobileCTA';
+import { LocalBusinessJsonLd } from '@/components/seo/JsonLd';
 import '@/app/globals.css';
 
 type Props = {
@@ -45,6 +46,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} className={inter.variable}>
       <body className="flex min-h-screen flex-col pb-[60px] lg:pb-0">
+        <LocalBusinessJsonLd />
         <NextIntlClientProvider>
           <Header />
           <main className="flex-1">{children}</main>
