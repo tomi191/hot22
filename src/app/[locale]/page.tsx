@@ -1,5 +1,10 @@
 import { use } from 'react';
 import { setRequestLocale } from 'next-intl/server';
+import { Hero } from '@/components/home/Hero';
+import { ServicesOverview } from '@/components/home/ServicesOverview';
+import { WhyUs } from '@/components/home/WhyUs';
+import { Reviews } from '@/components/home/Reviews';
+import { CTASection } from '@/components/home/CTASection';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -10,11 +15,12 @@ export default function HomePage({ params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <h1 className="text-4xl font-black">
-        <span className="text-hot-red">HOT</span>
-        <span className="text-frost-dark">22</span>
-      </h1>
-    </div>
+    <>
+      <Hero />
+      <ServicesOverview />
+      <WhyUs />
+      <Reviews />
+      <CTASection />
+    </>
   );
 }
