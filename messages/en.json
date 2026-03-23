@@ -146,6 +146,21 @@
     "whatsapp": "WhatsApp",
     "viber": "Viber"
   },
+  "FAQ": {
+    "sectionTitle": "Frequently Asked Questions",
+    "q1": "How often should I recharge my car's AC?",
+    "a1": "We recommend checking and recharging the climate system every 2 years or when you notice reduced cooling efficiency. If your AC is blowing warm air, it's time for a visit.",
+    "q2": "What's the difference between R134a and R1234yf refrigerant?",
+    "a2": "R134a is the standard refrigerant for cars manufactured before 2017. R1234yf is the new generation, more eco-friendly refrigerant, mandatory for newer models. At HOT22, we work with both types.",
+    "q3": "How long does an AC recharge take?",
+    "a3": "A standard recharge takes about 30-60 minutes, including diagnostics, vacuuming, and refrigerant charging. More complex issues may require additional time.",
+    "q4": "What does ozone treatment include?",
+    "a4": "Ozone treatment is a cabin disinfection procedure using ozone gas. It eliminates bacteria, viruses, mold, and unpleasant odors. The procedure takes about 30 minutes and is recommended after winter or when purchasing a used car.",
+    "q5": "Do you service all car brands?",
+    "a5": "Yes, at HOT22 we service all makes and models — from mainstream to premium vehicles. We have modern equipment for diagnostics and repair of climate systems on any vehicle.",
+    "q6": "How can I book an appointment?",
+    "a6": "You can book online through our booking form, call us at 089 338 3443, or message us on WhatsApp. We'll confirm your appointment within the business day."
+  },
   "ServicesList": {
     "pageTitle": "All Services",
     "pageSubtitle": "Full spectrum care for your car's climate system",
