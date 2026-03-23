@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = await getTranslations({ locale, namespace: 'Metadata' });
 
   return {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://hot22.vercel.app'),
     title: t('title'),
     description: t('description'),
     openGraph: {
@@ -30,6 +31,19 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: t('description'),
       locale: locale === 'bg' ? 'bg_BG' : 'en_US',
       type: 'website',
+      siteName: 'HOT22',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
+    },
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        'bg': '/bg',
+        'en': '/en',
+      },
     },
   };
 }
