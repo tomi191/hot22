@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Star, ExternalLink } from 'lucide-react';
 
-const reviewKeys = ['review1', 'review2', 'review3'] as const;
+const reviewKeys = ['review1', 'review2', 'review3', 'review4', 'review5', 'review6'] as const;
 
 export function Reviews() {
   const t = useTranslations('Reviews');
@@ -28,9 +28,8 @@ export function Reviews() {
                 ))}
               </div>
               <p className="mt-4 text-sm leading-relaxed text-frost-mid">&ldquo;{tList(`${key}Text`)}&rdquo;</p>
-              <div className="mt-4 flex items-center justify-between border-t border-frost-light pt-4">
+              <div className="mt-4 border-t border-frost-light pt-4">
                 <span className="font-semibold text-frost-dark">{tList(`${key}Name`)}</span>
-                <span className="text-xs text-frost-steel">{tList(`${key}Car`)}</span>
               </div>
             </div>
           ))}

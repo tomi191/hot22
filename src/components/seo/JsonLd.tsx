@@ -16,7 +16,7 @@ export function LocalBusinessJsonLd() {
       latitude: 43.2365602,
       longitude: 27.8472911,
     },
-    url: 'https://hot22.vercel.app',
+    url: 'https://hot22.eu',
     hasMap: 'https://maps.app.goo.gl/NSJzeRYmywHJ6gBeA',
     aggregateRating: {
       '@type': 'AggregateRating',

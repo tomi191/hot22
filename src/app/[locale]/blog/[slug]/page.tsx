@@ -63,7 +63,7 @@ function BlogPostContent({ slug }: { slug: string }) {
     '@type': 'Article',
     headline: title,
     description: excerpt,
-    image: `https://hot22.vercel.app${post.image}`,
+    image: `https://hot22.eu${post.image}`,
     datePublished: post.date,
     author: {
       '@type': 'Organization',

@@ -57,15 +57,18 @@
     "sectionSubtitle": "The trust of our clients is what matters most"
   },
   "ReviewsList": {
-    "review1Name": "Georgi M.",
-    "review1Text": "Excellent service! The AC works perfectly after the recharge. Highly recommend!",
-    "review1Car": "BMW 320d",
-    "review2Name": "Maria K.",
-    "review2Text": "Very professional approach. They quickly found the problem and fixed it. Will come back again.",
-    "review2Car": "VW Golf 7",
-    "review3Name": "Ivan P.",
-    "review3Text": "The best AC service in Varna. Personal attention and care for every detail.",
-    "review3Car": "Audi A4"
+    "review1Name": "Valentin Todorov",
+    "review1Text": "Great attitude towards clients! I was very pleased with the work they did! Probably the best AC service with the most modern equipment.",
+    "review2Name": "Petar Petrov",
+    "review2Text": "Very satisfied. Bringing my second car already and as always the AC works like a freezer. Highly recommend.",
+    "review3Name": "Kristina Tulpigova",
+    "review3Text": "Great attitude! Fast and quality service at fair prices! Extremely satisfied!",
+    "review4Name": "Denica Vilhelmova",
+    "review4Text": "Very satisfied with the work done and the attitude! I recommend!",
+    "review5Name": "Tihomir Manolchev",
+    "review5Text": "Excellent work, as always. Very satisfied.",
+    "review6Name": "Sveta Telpiz",
+    "review6Text": "Excellent service, the AC came back to life!"
   },
   "CTA": {
     "title": "AC not working properly?",
