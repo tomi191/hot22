@@ -1,6 +1,5 @@
 import { useTranslations } from 'next-intl';
 import { Star } from 'lucide-react';
-import { AnimateIn } from '@/components/ui/AnimateIn';
 
 const reviewKeys = ['review1', 'review2', 'review3'] as const;
 
@@ -17,21 +16,19 @@ export function Reviews() {
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {reviewKeys.map((key, index) => (
-            <AnimateIn key={key} delay={index * 0.1}>
-              <div className="rounded-radius-card border border-frost-steel/10 bg-frost-white p-6 shadow-sm">
-                <div className="flex gap-0.5">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} size={18} className="fill-hot-red text-hot-red" />
-                  ))}
-                </div>
-                <p className="mt-4 text-sm leading-relaxed text-frost-mid">&ldquo;{tList(`${key}Text`)}&rdquo;</p>
-                <div className="mt-4 flex items-center justify-between border-t border-frost-light pt-4">
-                  <span className="font-semibold text-frost-dark">{tList(`${key}Name`)}</span>
-                  <span className="text-xs text-frost-steel">{tList(`${key}Car`)}</span>
-                </div>
+          {reviewKeys.map((key) => (
+            <div key={key} className="rounded-radius-card border border-frost-steel/10 bg-frost-white p-6 shadow-sm">
+              <div className="flex gap-0.5">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} size={18} className="fill-hot-red text-hot-red" />
+                ))}
               </div>
-            </AnimateIn>
+              <p className="mt-4 text-sm leading-relaxed text-frost-mid">&ldquo;{tList(`${key}Text`)}&rdquo;</p>
+              <div className="mt-4 flex items-center justify-between border-t border-frost-light pt-4">
+                <span className="font-semibold text-frost-dark">{tList(`${key}Name`)}</span>
+                <span className="text-xs text-frost-steel">{tList(`${key}Car`)}</span>
+              </div>
+            </div>
           ))}
         </div>
       </div>
