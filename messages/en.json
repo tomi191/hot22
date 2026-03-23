@@ -1,0 +1,128 @@
+{
+  "Metadata": {
+    "title": "HOT22 — Auto AC Varna | Repair & Recharge",
+    "description": "Professional auto air conditioning repair, recharge and diagnostics in Varna. Full range of services for your car's climate system."
+  },
+  "Nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "gallery": "Gallery",
+    "blog": "Blog",
+    "contact": "Contact",
+    "booking": "Book Now"
+  },
+  "Hero": {
+    "title": "Your AC.",
+    "titleAccent": "Our expertise.",
+    "subtitle": "Professional auto air conditioning repair and recharge in Varna. Everything A to Z for your car's climate system.",
+    "cta": "Book Now",
+    "ctaSecondary": "View Services"
+  },
+  "Services": {
+    "sectionTitle": "Services",
+    "sectionSubtitle": "Full spectrum care for your climate system",
+    "repair": "Repair & Recharge",
+    "repairDesc": "Diagnostics, refrigerant recharge with R134a and R1234yf, leak repair and full AC system overhaul.",
+    "heating": "Heating & Valves",
+    "heatingDesc": "Heating system cleaning and repair, dashboard removal, valve repair for precise temperature control.",
+    "ozone": "Ozone Treatment",
+    "ozoneDesc": "Professional ozone cleaning — elimination of odors, bacteria and moisture from the cabin.",
+    "flush": "System Flush",
+    "flushDesc": "Complete AC system flush to remove contaminants, old oil and metal particles.",
+    "diagnostics": "Diagnostics",
+    "diagnosticsDesc": "Precision diagnostics with leak detector and UV testing for micro-leaks in the refrigerant system.",
+    "components": "Component Repair",
+    "componentsDesc": "Replacement and repair of compressors, condensers, evaporators, radiators and electrical parts.",
+    "viewAll": "View all services"
+  },
+  "WhyUs": {
+    "sectionTitle": "Why HOT22?",
+    "experience": "Years of Experience",
+    "experienceDesc": "Specialized expertise in automotive climate systems for all car brands.",
+    "equipment": "Modern Equipment",
+    "equipmentDesc": "Professional equipment for precision diagnostics and repair.",
+    "personal": "Personal Attention",
+    "personalDesc": "Attention to every detail and individual approach to each client.",
+    "fast": "Fast Service",
+    "fastDesc": "Efficient work without compromising quality.",
+    "allBrands": "All Brands",
+    "allBrandsDesc": "We work with all car makes and models.",
+    "fullService": "Full Service",
+    "fullServiceDesc": "Everything A to Z for your car's climate system."
+  },
+  "Reviews": {
+    "sectionTitle": "What Clients Say",
+    "sectionSubtitle": "The trust of our clients is what matters most"
+  },
+  "CTA": {
+    "title": "AC not working properly?",
+    "subtitle": "Contact us for quick diagnostics and repair.",
+    "button": "Book Now",
+    "call": "Call Us"
+  },
+  "Footer": {
+    "description": "Professional auto air conditioning repair and recharge in Varna. Full range of services for your car's climate system.",
+    "quickLinks": "Quick Links",
+    "workingHours": "Working Hours",
+    "weekdays": "Mon – Fri: 9:00 – 18:00",
+    "saturday": "Sat: 9:00 – 14:00",
+    "sunday": "Sunday: Closed",
+    "rights": "All rights reserved."
+  },
+  "Contact": {
+    "title": "Contact",
+    "subtitle": "Get in touch with us",
+    "address": "Vladislav Varnenchik Blvd., 9000 Varna",
+    "phone": "089 338 3443",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "messageLabel": "Message",
+    "send": "Send",
+    "success": "Message sent successfully!",
+    "error": "Error sending message. Please try again."
+  },
+  "Booking": {
+    "title": "Book an Appointment",
+    "subtitle": "Select a service, date and time for your visit",
+    "step1": "Service",
+    "step2": "Date & Time",
+    "step3": "Your Details",
+    "selectService": "Select a service",
+    "selectDate": "Select a date",
+    "selectTime": "Select a time",
+    "name": "Name",
+    "phone": "Phone",
+    "email": "Email (optional)",
+    "carModel": "Car make and model",
+    "notes": "Additional notes",
+    "next": "Next",
+    "back": "Back",
+    "submit": "Confirm Booking",
+    "success": "Booking confirmed! We'll contact you for confirmation.",
+    "error": "Booking failed. Please try again."
+  },
+  "About": {
+    "title": "About Us",
+    "subtitle": "Your trusted auto AC partner in Varna",
+    "story": "HOT22 is a specialized auto air conditioning service in Varna. With years of experience and modern equipment, we offer a full range of services — from diagnostics and recharge to complete repair of your car's climate system.",
+    "mission": "Our mission is to ensure comfort and safety for every driver, regardless of car make and model."
+  },
+  "Gallery": {
+    "title": "Gallery",
+    "subtitle": "See our work"
+  },
+  "Blog": {
+    "title": "Blog",
+    "subtitle": "Useful tips and information",
+    "readMore": "Read more"
+  },
+  "Common": {
+    "learnMore": "Learn more",
+    "getQuote": "Get a Quote",
+    "callUs": "Call Us",
+    "whatsapp": "WhatsApp",
+    "viber": "Viber"
+  }
+}
