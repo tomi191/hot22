@@ -32,11 +32,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       locale: locale === 'bg' ? 'bg_BG' : 'en_US',
       type: 'website',
       siteName: 'HOT22',
+      images: [{ url: '/images/services/hero.jpg', width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
       title: t('title'),
       description: t('description'),
+      images: ['/images/services/hero.jpg'],
     },
     alternates: {
       canonical: `/${locale}`,

@@ -49,6 +49,7 @@ function BlogContent() {
                 title={locale === 'bg' ? post.title_bg : post.title_en}
                 excerpt={locale === 'bg' ? post.excerpt_bg : post.excerpt_en}
                 date={post.date}
+                image={post.image}
               />
             ))}
           </div>

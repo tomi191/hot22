@@ -2,6 +2,7 @@ import { use } from 'react';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import Image from 'next/image';
 import { Shield, Cpu, Users, ArrowRight } from 'lucide-react';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -32,8 +33,15 @@ function AboutContent() {
   return (
     <>
       {/* Hero */}
-      <section className="clip-diagonal bg-frost-dark pb-24 pt-16 sm:pb-28 sm:pt-20">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
+      <section className="clip-diagonal relative bg-frost-dark pb-24 pt-16 sm:pb-28 sm:pt-20">
+        <Image
+          src="/images/services/workshop.jpg"
+          alt=""
+          fill
+          className="object-cover opacity-15"
+          priority
+        />
+        <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
           <h1 className="text-3xl font-black tracking-tight text-white sm:text-5xl">
             {t('title')}
           </h1>

@@ -1,12 +1,13 @@
 'use client';
 
 import { useEffect, useCallback } from 'react';
+import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface LightboxItem {
   id: number;
   label: string;
-  color: string;
+  image: string;
 }
 
 interface LightboxProps {
@@ -66,10 +67,19 @@ export function Lightbox({ items, currentIndex, onClose, onNavigate }: LightboxP
       )}
 
       <div
-        className={`${item.color} flex aspect-video w-full max-w-3xl items-center justify-center rounded-lg`}
+        className="relative aspect-video w-full max-w-3xl overflow-hidden rounded-lg"
         onClick={(e) => e.stopPropagation()}
       >
-        <span className="text-xl font-bold text-white">{item.label}</span>
+        <Image
+          src={item.image}
+          alt={item.label}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+          <span className="text-xl font-bold text-white">{item.label}</span>
+        </div>
       </div>
 
       {hasNext && (

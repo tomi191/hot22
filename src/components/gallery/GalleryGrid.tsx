@@ -2,17 +2,18 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import { Lightbox } from './Lightbox';
 
 const galleryItems = [
-  { id: 'ac-diagnostics', color: 'bg-frost-dark' },
-  { id: 'compressor-repair', color: 'bg-hot-red' },
-  { id: 'refrigerant-recharge', color: 'bg-accent-cool' },
-  { id: 'heater-core', color: 'bg-frost-mid' },
-  { id: 'ozone-treatment', color: 'bg-accent-warm' },
-  { id: 'uv-leak-test', color: 'bg-hot-red-dark' },
-  { id: 'condenser-work', color: 'bg-frost-steel' },
-  { id: 'workshop', color: 'bg-frost-dark' },
+  { id: 'ac-diagnostics', image: '/images/services/diagnostics.jpg' },
+  { id: 'compressor-repair', image: '/images/services/compressor.jpg' },
+  { id: 'refrigerant-recharge', image: '/images/services/recharge.jpg' },
+  { id: 'heater-core', image: '/images/services/heater.jpg' },
+  { id: 'ozone-treatment', image: '/images/services/ozone.jpg' },
+  { id: 'uv-leak-test', image: '/images/services/diagnostics.jpg' },
+  { id: 'condenser-work', image: '/images/services/condenser.jpg' },
+  { id: 'workshop', image: '/images/services/workshop.jpg' },
 ];
 
 export function GalleryGrid() {
@@ -22,7 +23,7 @@ export function GalleryGrid() {
   const lightboxItems = galleryItems.map((item, index) => ({
     id: index + 1,
     label: t(`galleryItems.${item.id}`),
-    color: item.color,
+    image: item.image,
   }));
 
   return (
@@ -32,12 +33,20 @@ export function GalleryGrid() {
           <button
             key={item.id}
             onClick={() => setLightboxIndex(index)}
-            className={`${item.color} group relative flex aspect-square items-center justify-center overflow-hidden rounded-radius-card transition-all hover:scale-[1.02] hover:shadow-lg`}
+            className="group relative aspect-square overflow-hidden rounded-radius-card transition-all hover:scale-[1.02] hover:shadow-lg"
           >
-            <span className="text-sm font-semibold text-white/80 transition-colors group-hover:text-white">
-              {t(`galleryItems.${item.id}`)}
-            </span>
-            <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />
+            <Image
+              src={item.image}
+              alt={t(`galleryItems.${item.id}`)}
+              width={600}
+              height={400}
+              className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black/30 transition-colors group-hover:bg-black/40">
+              <span className="text-sm font-semibold text-white/80 transition-colors group-hover:text-white">
+                {t(`galleryItems.${item.id}`)}
+              </span>
+            </div>
           </button>
         ))}
       </div>

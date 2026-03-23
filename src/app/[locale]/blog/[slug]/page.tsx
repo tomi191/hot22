@@ -4,6 +4,7 @@ import { useTranslations, useLocale } from 'next-intl';
 
 import { Link } from '@/i18n/navigation';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import { placeholderPosts } from '@/lib/blog-data';
 import { routing } from '@/i18n/routing';
 import { ArrowLeft, Calendar } from 'lucide-react';
@@ -71,9 +72,16 @@ function BlogPostContent({ slug }: { slug: string }) {
 
       <article className="py-section-sm sm:py-section">
         <div className="mx-auto max-w-4xl px-4 sm:px-6">
-          {/* Placeholder image */}
-          <div className="mb-8 flex aspect-video items-center justify-center rounded-radius-card bg-frost-dark">
-            <span className="text-frost-steel">Featured Image Placeholder</span>
+          {/* Featured image */}
+          <div className="relative mb-8 aspect-video overflow-hidden rounded-radius-card bg-frost-dark">
+            <Image
+              src={post.image}
+              alt={title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 768px"
+              priority
+            />
           </div>
 
           <div className="prose prose-lg max-w-none">

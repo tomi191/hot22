@@ -7,11 +7,13 @@ export interface BlogPost {
   content_bg: string;
   content_en: string;
   date: string;
+  image: string;
 }
 
 export const placeholderPosts: BlogPost[] = [
   {
     slug: 'kogda-da-zaredite-klimatika',
+    image: '/images/services/recharge.jpg',
     title_bg: 'Кога да заредите климатика на колата?',
     title_en: 'When to Recharge Your Car AC?',
     excerpt_bg:
@@ -26,6 +28,7 @@ export const placeholderPosts: BlogPost[] = [
   },
   {
     slug: 'ozoniranie-predimstva',
+    image: '/images/services/ozone.jpg',
     title_bg: 'Предимства на озонирането на автомобила',
     title_en: 'Benefits of Car Ozone Treatment',
     excerpt_bg:
@@ -40,6 +43,7 @@ export const placeholderPosts: BlogPost[] = [
   },
   {
     slug: 'sezonni-saveti-klimatik',
+    image: '/images/services/workshop.jpg',
     title_bg: 'Сезонни съвети за вашия автоклиматик',
     title_en: 'Seasonal Tips for Your Car AC',
     excerpt_bg:

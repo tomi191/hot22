@@ -1,5 +1,6 @@
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import { ArrowRight, Calendar } from 'lucide-react';
 
 interface BlogCardProps {
@@ -7,16 +8,29 @@ interface BlogCardProps {
   title: string;
   excerpt: string;
   date: string;
+  image?: string;
 }
 
-export function BlogCard({ slug, title, excerpt, date }: BlogCardProps) {
+export function BlogCard({ slug, title, excerpt, date, image }: BlogCardProps) {
   const t = useTranslations('Blog');
 
   return (
     <article className="group overflow-hidden rounded-radius-card border border-frost-steel/10 bg-frost-white transition-all hover:border-hot-red/20 hover:shadow-lg hover:shadow-hot-red/5">
-      {/* Placeholder image */}
-      <div className="flex aspect-video items-center justify-center bg-frost-dark">
-        <span className="text-sm text-frost-steel">Image Placeholder</span>
+      {/* Blog post image */}
+      <div className="relative aspect-video overflow-hidden bg-frost-dark">
+        {image ? (
+          <Image
+            src={image}
+            alt={title}
+            width={600}
+            height={400}
+            className="h-full w-full object-cover transition-transform group-hover:scale-105"
+          />
+        ) : (
+          <div className="flex h-full items-center justify-center">
+            <span className="text-sm text-frost-steel">Image Placeholder</span>
+          </div>
+        )}
       </div>
 
       <div className="p-6">

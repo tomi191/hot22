@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 
 export function Hero() {
@@ -7,6 +8,15 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-frost-dark texture-metal">
+      {/* Hero background image */}
+      <Image
+        src="/images/services/hero.jpg"
+        alt=""
+        fill
+        className="object-cover opacity-20"
+        priority
+      />
+
       {/* Temperature gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-hot-red/20 via-transparent to-accent-cool/10" />
 
