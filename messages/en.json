@@ -34,7 +34,8 @@
     "diagnosticsDesc": "Precision diagnostics with leak detector and UV testing for micro-leaks in the refrigerant system.",
     "components": "Component Repair",
     "componentsDesc": "Replacement and repair of compressors, condensers, evaporators, radiators and electrical parts.",
-    "viewAll": "View all services"
+    "viewAll": "View all services",
+    "learnMore": "Learn more"
   },
   "WhyUs": {
     "sectionTitle": "Why HOT22?",
