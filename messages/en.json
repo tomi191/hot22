@@ -55,6 +55,17 @@
     "sectionTitle": "What Clients Say",
     "sectionSubtitle": "The trust of our clients is what matters most"
   },
+  "ReviewsList": {
+    "review1Name": "Georgi M.",
+    "review1Text": "Excellent service! The AC works perfectly after the recharge. Highly recommend!",
+    "review1Car": "BMW 320d",
+    "review2Name": "Maria K.",
+    "review2Text": "Very professional approach. They quickly found the problem and fixed it. Will come back again.",
+    "review2Car": "VW Golf 7",
+    "review3Name": "Ivan P.",
+    "review3Text": "The best AC service in Varna. Personal attention and care for every detail.",
+    "review3Car": "Audi A4"
+  },
   "CTA": {
     "title": "AC not working properly?",
     "subtitle": "Contact us for quick diagnostics and repair.",
@@ -111,7 +122,17 @@
   },
   "Gallery": {
     "title": "Gallery",
-    "subtitle": "See our work"
+    "subtitle": "See our work",
+    "galleryItems": {
+      "ac-diagnostics": "AC Diagnostics",
+      "compressor-repair": "Compressor Repair",
+      "refrigerant-recharge": "Refrigerant Recharge",
+      "heater-core": "Heater Core Repair",
+      "ozone-treatment": "Ozone Treatment",
+      "uv-leak-test": "UV Leak Test",
+      "condenser-work": "Condenser Work",
+      "workshop": "Our Workshop"
+    }
   },
   "Blog": {
     "title": "Blog",

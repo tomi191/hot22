@@ -1,21 +1,29 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { Lightbox } from './Lightbox';
 
 const galleryItems = [
-  { id: 1, label: 'AC Diagnostics', color: 'bg-frost-dark' },
-  { id: 2, label: 'Compressor Repair', color: 'bg-hot-red' },
-  { id: 3, label: 'Refrigerant Recharge', color: 'bg-accent-cool' },
-  { id: 4, label: 'Heater Core', color: 'bg-frost-mid' },
-  { id: 5, label: 'Ozone Treatment', color: 'bg-accent-warm' },
-  { id: 6, label: 'UV Leak Test', color: 'bg-hot-red-dark' },
-  { id: 7, label: 'Condenser Work', color: 'bg-frost-steel' },
-  { id: 8, label: 'Workshop', color: 'bg-frost-dark' },
+  { id: 'ac-diagnostics', color: 'bg-frost-dark' },
+  { id: 'compressor-repair', color: 'bg-hot-red' },
+  { id: 'refrigerant-recharge', color: 'bg-accent-cool' },
+  { id: 'heater-core', color: 'bg-frost-mid' },
+  { id: 'ozone-treatment', color: 'bg-accent-warm' },
+  { id: 'uv-leak-test', color: 'bg-hot-red-dark' },
+  { id: 'condenser-work', color: 'bg-frost-steel' },
+  { id: 'workshop', color: 'bg-frost-dark' },
 ];
 
 export function GalleryGrid() {
+  const t = useTranslations('Gallery');
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  const lightboxItems = galleryItems.map((item, index) => ({
+    id: index + 1,
+    label: t(`galleryItems.${item.id}`),
+    color: item.color,
+  }));
 
   return (
     <>
@@ -27,7 +35,7 @@ export function GalleryGrid() {
             className={`${item.color} group relative flex aspect-square items-center justify-center overflow-hidden rounded-radius-card transition-all hover:scale-[1.02] hover:shadow-lg`}
           >
             <span className="text-sm font-semibold text-white/80 transition-colors group-hover:text-white">
-              {item.label}
+              {t(`galleryItems.${item.id}`)}
             </span>
             <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />
           </button>
@@ -36,7 +44,7 @@ export function GalleryGrid() {
 
       {lightboxIndex !== null && (
         <Lightbox
-          items={galleryItems}
+          items={lightboxItems}
           currentIndex={lightboxIndex}
           onClose={() => setLightboxIndex(null)}
           onNavigate={setLightboxIndex}
