@@ -6,7 +6,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://hot22.vercel.app';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const locales = ['bg', 'en'];
-  const staticPages = ['', '/services', '/about', '/gallery', '/blog', '/contact', '/booking'];
+  const staticPages = ['', '/services', '/about', '/blog', '/contact', '/booking'];
 
   const staticEntries = locales.flatMap((locale) =>
     staticPages.map((page) => ({

@@ -27,7 +27,7 @@ export function Footer() {
               {t('quickLinks')}
             </h3>
             <nav className="flex flex-col gap-2">
-              {(['home', 'services', 'about', 'gallery', 'blog', 'contact'] as const).map((key) => (
+              {(['home', 'services', 'about', 'blog', 'contact'] as const).map((key) => (
                 <Link
                   key={key}
                   href={key === 'home' ? '/' : `/${key}`}
