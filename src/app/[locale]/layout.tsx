@@ -26,6 +26,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://hot22.eu'),
     title: t('title'),
     description: t('description'),
+    manifest: '/manifest.json',
+    themeColor: '#DC2626',
     openGraph: {
       title: t('title'),
       description: t('description'),
