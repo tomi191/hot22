@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:next-intl.dev)",
+      "Bash(pnpm create:*)",
+      "Bash(npx create-next-app@latest . --ts --tailwind --eslint --app --src-dir --turbopack --import-alias \"@/*\" --use-pnpm)",
+      "Bash(timeout 15 pnpm dev)"
+    ]
+  }
+}
