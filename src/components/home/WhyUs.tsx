@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Award, Cpu, Heart, Zap, Car, Settings } from 'lucide-react';
+import { AnimateIn } from '@/components/ui/AnimateIn';
 
 const advantages = [
   { key: 'experience', icon: Award },
@@ -23,16 +24,18 @@ export function WhyUs() {
         </h2>
 
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {advantages.map(({ key, icon: Icon }) => (
-            <div key={key} className="flex gap-4">
-              <div className="shrink-0 rounded-lg bg-hot-red/20 p-3 text-hot-red">
-                <Icon size={24} />
+          {advantages.map(({ key, icon: Icon }, index) => (
+            <AnimateIn key={key} delay={index * 0.1}>
+              <div className="flex gap-4">
+                <div className="shrink-0 rounded-lg bg-hot-red/20 p-3 text-hot-red">
+                  <Icon size={24} />
+                </div>
+                <div>
+                  <h3 className="font-bold text-frost-white">{t(key)}</h3>
+                  <p className="mt-1 text-sm leading-relaxed text-frost-steel">{t(`${key}Desc`)}</p>
+                </div>
               </div>
-              <div>
-                <h3 className="font-bold text-frost-white">{t(key)}</h3>
-                <p className="mt-1 text-sm leading-relaxed text-frost-steel">{t(`${key}Desc`)}</p>
-              </div>
-            </div>
+            </AnimateIn>
           ))}
         </div>
       </div>

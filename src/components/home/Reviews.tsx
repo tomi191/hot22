@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Star } from 'lucide-react';
+import { AnimateIn } from '@/components/ui/AnimateIn';
 
 const placeholderReviews = [
   { id: '1', name: 'Георги М.', rating: 5, text: 'Отлично обслужване! Климатикът работи перфектно след зареждането. Препоръчвам!', car_model: 'BMW 320d' },
@@ -19,19 +20,21 @@ export function Reviews() {
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {placeholderReviews.map((review) => (
-            <div key={review.id} className="rounded-radius-card border border-frost-steel/10 bg-frost-white p-6 shadow-sm">
-              <div className="flex gap-0.5">
-                {Array.from({ length: review.rating }).map((_, i) => (
-                  <Star key={i} size={18} className="fill-hot-red text-hot-red" />
-                ))}
+          {placeholderReviews.map((review, index) => (
+            <AnimateIn key={review.id} delay={index * 0.1}>
+              <div className="rounded-radius-card border border-frost-steel/10 bg-frost-white p-6 shadow-sm">
+                <div className="flex gap-0.5">
+                  {Array.from({ length: review.rating }).map((_, i) => (
+                    <Star key={i} size={18} className="fill-hot-red text-hot-red" />
+                  ))}
+                </div>
+                <p className="mt-4 text-sm leading-relaxed text-frost-mid">&ldquo;{review.text}&rdquo;</p>
+                <div className="mt-4 flex items-center justify-between border-t border-frost-light pt-4">
+                  <span className="font-semibold text-frost-dark">{review.name}</span>
+                  {review.car_model && <span className="text-xs text-frost-steel">{review.car_model}</span>}
+                </div>
               </div>
-              <p className="mt-4 text-sm leading-relaxed text-frost-mid">&ldquo;{review.text}&rdquo;</p>
-              <div className="mt-4 flex items-center justify-between border-t border-frost-light pt-4">
-                <span className="font-semibold text-frost-dark">{review.name}</span>
-                {review.car_model && <span className="text-xs text-frost-steel">{review.car_model}</span>}
-              </div>
-            </div>
+            </AnimateIn>
           ))}
         </div>
       </div>

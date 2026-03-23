@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { Thermometer, Wind, Snowflake, Droplets, Search, Wrench, ArrowRight } from 'lucide-react';
+import { AnimateIn } from '@/components/ui/AnimateIn';
 
 const services = [
   { key: 'repair', icon: Thermometer },
@@ -25,18 +26,19 @@ export function ServicesOverview() {
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map(({ key, icon: Icon }) => (
-            <div
-              key={key}
-              className="group relative overflow-hidden rounded-radius-card border border-frost-steel/10 bg-frost-white p-6 transition-all hover:border-hot-red/20 hover:shadow-lg hover:shadow-hot-red/5"
-            >
-              <div className="mb-4 inline-flex rounded-xl bg-hot-red/10 p-3 text-hot-red transition-colors group-hover:bg-hot-red group-hover:text-white">
-                <Icon size={24} />
+          {services.map(({ key, icon: Icon }, index) => (
+            <AnimateIn key={key} delay={index * 0.1}>
+              <div
+                className="group relative overflow-hidden rounded-radius-card border border-frost-steel/10 bg-frost-white p-6 transition-all hover:border-hot-red/20 hover:shadow-lg hover:shadow-hot-red/5"
+              >
+                <div className="mb-4 inline-flex rounded-xl bg-hot-red/10 p-3 text-hot-red transition-colors group-hover:bg-hot-red group-hover:text-white">
+                  <Icon size={24} />
+                </div>
+                <h3 className="text-lg font-bold text-frost-dark">{t(key)}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-frost-mid">{t(`${key}Desc`)}</p>
+                <div className="absolute bottom-0 left-0 h-1 w-0 bg-hot-red transition-all duration-300 group-hover:w-full" />
               </div>
-              <h3 className="text-lg font-bold text-frost-dark">{t(key)}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-frost-mid">{t(`${key}Desc`)}</p>
-              <div className="absolute bottom-0 left-0 h-1 w-0 bg-hot-red transition-all duration-300 group-hover:w-full" />
-            </div>
+            </AnimateIn>
           ))}
         </div>
 
