@@ -162,6 +162,56 @@
     "q6": "How can I book an appointment?",
     "a6": "You can book online through our booking form, call us at 089 338 3443, or message us on WhatsApp. We'll confirm your appointment within the business day."
   },
+  "ServiceDetails": {
+    "problemTitle": "What's the problem?",
+    "processTitle": "How we fix it",
+    "equipmentTitle": "Professional equipment",
+    "timingTitle": "When to visit us?",
+    "bookThisService": "Book this service",
+
+    "repair-recharge": {
+      "hook": "AC not cooling? We fix the problem in 30-60 minutes.",
+      "problems": ["AC blows warm air", "Reduced cooling power", "Compressor cycles on and off frequently", "Strange noises when AC turns on"],
+      "steps": ["Full system diagnostics", "Leak check with electronic detector", "Vacuum to remove moisture and air", "Recharge with exact refrigerant amount", "Final temperature verification"],
+      "equipment": "We work with professional TEXA Konfort 780 Touch BI-GAS and TEXA 705R stations for precise R134a and R1234yf recharging.",
+      "timing": "We recommend a check every 2 years or immediately when you notice reduced cooling. Best time: before summer."
+    },
+    "heating-repair": {
+      "hook": "Heater not working? We remove the dashboard and fix it thoroughly.",
+      "problems": ["Heater doesn't warm or warms weakly", "Windows fog up from inside", "Bad smell when heater turns on", "Antifreeze leak inside cabin"],
+      "steps": ["Heating system diagnostics", "Dashboard removal for access", "Heater core cleaning or replacement", "Valve and mixer repair", "Reassembly and testing"],
+      "equipment": "We have a complete toolkit for dashboard removal on all European car makes.",
+      "timing": "Check before winter season. If you notice fogging or weak heating — don't wait."
+    },
+    "ozone-treatment": {
+      "hook": "Bad smell in your car? Ozone treatment eliminates it completely in 30 minutes.",
+      "problems": ["Persistent cigarette or food smell", "Mold or moisture odor", "Allergic reactions while driving", "Bought a used car with unknown smells"],
+      "steps": ["Ventilation and cabin preparation", "Ozone generator placement", "30-minute concentrated ozone treatment", "Post-treatment ventilation"],
+      "equipment": "We use a professional high-concentration ozone generator for complete elimination of bacteria, viruses, and odors.",
+      "timing": "Recommended after winter, when buying a used car, or when unpleasant odors appear."
+    },
+    "system-flush": {
+      "hook": "Contaminated AC system? We flush it for full efficiency restoration.",
+      "problems": ["Reduced AC efficiency", "Dirty or dark refrigerant found during check", "Recurring problems after recharge", "System with metal particles from worn compressor"],
+      "steps": ["Old refrigerant extraction", "Professional chemical flush", "Contaminant and old oil removal", "System vacuum", "Fresh refrigerant and oil charge"],
+      "equipment": "We use specialized flushing stations for complete cleaning of condenser, evaporator, and hoses.",
+      "timing": "Necessary when replacing compressor, when metal particles are found, or with recurring issues."
+    },
+    "leak-detection": {
+      "hook": "Refrigerant leaking fast? We find the exact leak location with professional equipment.",
+      "problems": ["AC stops cooling shortly after recharge", "Visible oily spots on AC hoses", "Low pressure during diagnostics", "Compressor noise during operation"],
+      "steps": ["Visual inspection of all connections", "Electronic leak detector scan", "UV test with fluorescent dye", "Leak localization and marking", "Repair recommendation"],
+      "equipment": "We have an electronic refrigerant detector and UV lamp for finding the smallest micro-leaks.",
+      "timing": "If your AC loses refrigerant faster than normal (normal loss is ~10-15% per year)."
+    },
+    "compressor-repair": {
+      "hook": "The compressor is the heart of your AC. We repair or replace it quickly and professionally.",
+      "problems": ["AC doesn't cool at all", "Loud noise when AC turns on", "Compressor won't engage", "Seized compressor with metallic noise"],
+      "steps": ["Compressor diagnostics", "Power supply and clutch check", "Old compressor removal", "New/refurbished compressor installation", "System flush, vacuum, and recharge"],
+      "equipment": "We work with original and quality aftermarket compressors for all makes. Full system flush included with replacement.",
+      "timing": "Urgent — when compressor is seized or AC has no cooling at all. Don't delay — damage can spread."
+    }
+  },
   "ServicesList": {
     "pageTitle": "All Services",
     "pageSubtitle": "Full spectrum care for your car's climate system",
