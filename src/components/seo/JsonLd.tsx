@@ -13,8 +13,15 @@ export function LocalBusinessJsonLd() {
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 43.2141,
-      longitude: 27.9147,
+      latitude: 43.2365602,
+      longitude: 27.8472911,
+    },
+    url: 'https://hot22.vercel.app',
+    hasMap: 'https://maps.app.goo.gl/NSJzeRYmywHJ6gBeA',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      reviewCount: '14',
     },
     openingHoursSpecification: [
       {
